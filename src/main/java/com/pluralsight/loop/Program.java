@@ -35,6 +35,10 @@ public class Program {
                 System.out.println(person);
             }
         }
-        scanner.close();
-    }
-}
+
+        int totalAge = 0;
+        for (Person person : people) {
+            totalAge += person.getAge();
+        }
+        double averageAge = (double) totalAge / people.size();
+        System.out.printf("\nAverage Age: %.2f%n", averageAge);
